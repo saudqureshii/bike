@@ -1,0 +1,93 @@
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <div class="row">
+      <h1 class="section-title text-center">Gallery</h1>
+      <p class="section-para text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+        magnam unde assumenda illum corporis explicabo blanditiis. Atque
+        distinctio consequuntur asperiores ab sapiente. Temporibus quasi
+        quis consectetur, pariatur perspiciatis aperiam aut!
+      </p>
+    </div>
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/1.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/2.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/3.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/4.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/5.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/6.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/7.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="col-4 col-md-3">
+        <div class="gallery-item">
+          <img src="../images/gallery/8.png" alt="Image 1" class="gallery-image">
+        </div>
+      </div>
+    </div>
+     <!-- Lightbox Modal -->
+     <div id="lightbox" class="lightbox">
+      <span class="close" id="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="Large Image">
+  </div>
+  </div>
+</section>
+
+<script>
+  const galleryImages  = document.querySelectorAll("gallery-image");
+  const lightbox = document.getElementById("lightbox");
+  const lightBoxImg = document.getElementById("lightbox-img");
+  const lightboxClose = document.getElementById("lightbox-close");
+
+galleryImages.forEach(img =>{
+  img.addEventListener("click", (e)=>{
+    lightBoxImg.src = e.target.src;
+    lightbox.style.display='flex';
+  })
+})
+
+lightboxClose.addEventListener("click", (e)=>{
+  lightbox.style.display='none';
+})
+
+lightbox.addEventListener("click", (e)=>{
+  if (event.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+})
+
+</script>
